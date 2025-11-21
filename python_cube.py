@@ -5,52 +5,69 @@ yellow = 2
 green = 3
 blue = 4
 white = 5
-red_face_current =    [0,0,0,0,0,0,0,0,0]
-orange_face_current = [1,1,1,1,1,1,1,1,1]
-yellow_face_current = [2,2,2,2,2,2,2,2,2]
-green_face_current =  [3,3,3,3,3,3,3,3,3]
-blue_face_current =   [4,4,4,4,4,4,4,4,4]
-white_face_current =  [5,5,5,5,5,5,5,5,5]
+red_face_current =    [0,0,0,0, 0 ,0,0,0,0]
+orange_face_current = [1,1,1,1, 1 ,1,1,1,1]
+yellow_face_current = [2,2,2,2, 2 ,2,2,2,2]
+green_face_current =  [3,3,3,3, 3 ,3,3,3,3]
+blue_face_current =   [4,4,4,4, 4 ,4,4,4,4]
+white_face_current =  [5,5,5,5, 5 ,5,5,5,5]
 solved = False
 running = True
-
+version = "1.0.0"
 #Classes
 class Cube():
     def u():
         print(f'{rotation.upper()} turn done.')
+        print(white_face_current[:2])
     def d():
         print(f'{rotation.upper()} turn done.')
+        
     def r():
         print(f'{rotation.upper()} turn done.')
+        
     def l():
         print(f'{rotation.upper()} turn done.')
+        
     def f():
         print(f'{rotation.upper()} turn done.')
+        
     def b():
         print(f'{rotation.upper()} turn done.')
+        
     def _u():
         print(f'{rotation.upper()} turn done.')
+        
     def _d():
         print(f'{rotation.upper()} turn done.')
+        
     def _r():
         print(f'{rotation.upper()} turn done.')
+        
     def _l():
         print(f'{rotation.upper()} turn done.')
+        
     def _f():
         print(f'{rotation.upper()} turn done.')
+        
     def _b():
         print(f'{rotation.upper()} turn done.')
+        
     def print_state():
         print('placeholder')
 #Start code, shown only once
-def welcome():
-    print("Welcome to zcrbla's rubik's cube simulator v1.0.0!")
-welcome()
+print(f"Welcome to zcrbla's rubik's cube simulator v{version}")
+first_run = True
 while running:
     #Proccess
     if red_face_current != [0,0,0,0,0,0,0,0,0] and orange_face_current != [1,1,1,1,1,1,1,1,1] and yellow_face_current != [2,2,2,2,2,2,2,2,2] and green_face_current != [3,3,3,3,3,3,3,3,3] and blue_face_current != [4,4,4,4,4,4,4,4,4] and white_face_current != [5,5,5,5,5,5,5,5,5]:
         solved = False
-    if solved = True:
+
+    if red_face_current == [0,0,0,0,0,0,0,0,0] and orange_face_current == [1,1,1,1,1,1,1,1,1] and yellow_face_current == [2,2,2,2,2,2,2,2,2] and green_face_current == [3,3,3,3,3,3,3,3,3] and blue_face_current == [4,4,4,4,4,4,4,4,4] and white_face_current == [5,5,5,5,5,5,5,5,5]:
+        if first_run == True:
+            first_run = False
+        elif first_run == False:
+            solved = True
+    if solved == True:
         print("Congratulations! You solved the cube. Would you like to continue?")
         while True:
             continue_input = input()
